@@ -160,7 +160,9 @@ def baseline_model(model, x_train, y_train, x_test, y_test):
     model_fit.fit(x_train, y_train)
     y_pred_proba = model_fit.predict_proba(x_test)[:,1]
     y_pred_proba_train = model_fit.predict_proba(x_train)[:,1]
-    print('test set roc_auc_score is {:.5}'.format(roc_auc_score(y_test, y_pred_proba)))
+    print('[INFO] Test roc_auc_score is {:.5}'.format(roc_auc_score(y_test, y_pred_proba)))
+
+    return model_fit
     
 # Display/plot feature importance untuk model LGBM
 def display_importances(feature_importance_df_):
