@@ -1,5 +1,3 @@
-#Token Github : https://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@github.com/adiptamartulandi/Machine-Learning-Project-Git.git
-
 #Import Library
 import pandas as pd
 import numpy as np
