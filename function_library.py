@@ -1,4 +1,4 @@
-#Token Github : https://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@github.com/adiptamartulandi/Machine-Learning-Project-Git.git
+#Token Github : https://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@github.com/adiptamartulandi/Machine-Learning-Project-Git.git
 
 #Import Library
 import pandas as pd
