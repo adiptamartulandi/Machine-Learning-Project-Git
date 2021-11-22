@@ -1,4 +1,5 @@
 #import library
+print('[INFO] Script Untuk Proses Modeling ...')
 print('[INFO] Proses Import Library ...')
 
 import pandas as pd
