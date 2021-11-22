@@ -30,8 +30,11 @@ model_lgbm = joblib.load('model_lgbm.pkl')
 
 hasil_prediksi = model_lgbm.predict_proba(x)[:,1]
 hasil_prediksi = np.where(hasil_prediksi < 0.5, 0, 1)
+df_hasil_prediksi = pd.DataFrame(hasil_prediksi)
 
-hasil_positif = pd.DataFrame(hasil_prediksi)[0].value_counts()[1]
-hasil_negatif = pd.DataFrame(hasil_prediksi)[0].value_counts()[0]
+hasil_positif = df_hasil_prediksi[0].value_counts()[1]
+hasil_negatif = df_hasil_prediksi[0].value_counts()[0]
 
 print(f'[INFO] Jumlah Prediksi Label Positif {hasil_positif} dan Label Negatif {hasil_negatif} ...')
+
+df_hasil_prediksi.to_csv('hasil_prediksi.csv', index=False)
